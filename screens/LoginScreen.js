@@ -1,29 +1,66 @@
 import React from 'react';
-import {Button, StatusBar, StyleSheet, Text, TextInput, View, Alert, Image} from 'react-native';
+import {Button, StatusBar, StyleSheet, Text, TextInput, View, Alert, Image, AsyncStorage } from 'react-native';
 import a from './../assets/images/logo2.png'
+import * as api from './../api/api'
+
 export default class LoginScreen extends React.Component {
     onPressLearnMore=()=>{
-        if(this.state.username === 'A' && this.state.password === 'A')
-        this.props.navigation.navigate('HomeMain');
-        else{
-            Alert.alert(
-                'Login Failed',
-                'Invalid Credential!! Please try Again',
-                [
-                    {text: 'OK', onPress: () => console.log('OK Pressed')},
-                ],
-                { cancelable: false }
-            )
-        }
+        fetch(api.LOGIN_API, {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                username: this.state.username,
+                password: this.state.password,
+            }),
+        }) .then((response) => response.json())
+            .then((responseJson) => {
 
+                if (responseJson.status === 'success') {
+                            AsyncStorage.setItem('userid', responseJson.userid);
+                    AsyncStorage.setItem('name', this.state.username);
+                    AsyncStorage.setItem('login', 'true');
+                            this.props.navigation.navigate('Home');
 
-    };
+                } else {
+                    Alert.alert(
+                        'Login Failed',
+                        JSON.stringify(responseJson),
+                        [
+                            {text: 'OK', onPress: () => console.log('OK Pressed')},
+                        ],
+                        {cancelable: false}
+                    )
+                }
+            })
+            .catch((error) => {
+                Alert.alert(
+                    'Login Failed',
+                    'Invalid Credential!! Please try Again',
+                    [
+                        {text: 'OK', onPress: () => console.log('OK Pressed')},
+                    ],
+                    { cancelable: false }
+                )
+            });
+    }
 
     constructor(props) {
         super(props);
         this.state = { username: '',
         password :'',
         disabled:true};
+
+
+    }
+
+    componentDidMount  = () =>{
+        AsyncStorage.getItem('login').then((value)=>{
+            if(value === 'true')
+            this.props.navigation.navigate('Home');
+        })
     }
 
     render() {

@@ -19,5 +19,5 @@ export default createStackNavigator({
     SalesList: {screen: DisplaySalesScreen},
 
 }, {
-    initialRouteName: 'SalesDetail',
+    initialRouteName: 'HomeMain',
 });

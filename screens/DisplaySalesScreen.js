@@ -5,7 +5,6 @@ export default class DisplaySalesScreen extends React.Component {
 
     static navigationOptions = {
         title: 'SALES LIST',
-        headerLeft: null,
     };
 
 

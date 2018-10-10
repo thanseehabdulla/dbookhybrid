@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Image, StatusBar, StyleSheet, Text, View} from 'react-native';
+import {AsyncStorage, Button, Image, StatusBar, StyleSheet, Text, View} from 'react-native';
 import { NavigationActions } from 'react-navigation';
 import a from './../assets/images/logo2.png'
 export default class HomeMainScreen extends React.Component {
@@ -9,12 +9,42 @@ export default class HomeMainScreen extends React.Component {
         headerLeft: null,
     };
 
-    onPressLearnMore=()=>{
+    onSignOut=()=>{
+        // if(param === 'signout'){
+        AsyncStorage.setItem('login', 'false');
+            this.props.navigation.navigate('login');
+        // }
+
+    }
+    onSales = ()=>{
+        this.props.navigation.navigate('Sales');
+    };
+    onSalesList = ()=>{
+        this.props.navigation.navigate('SalesList');
+    };
+    onPurchase=()=>{
+        this.props.navigation.navigate('Purchase');
+    };
+    onPurchaseList=()=>{
+        this.props.navigation.navigate('PurchaseList');
+    };
+
+    constructor(props) {
+        super(props);
+        this.state={
+            name:''
+        }
+
 
     }
 
-    constructor(){
-        super();
+    componentDidMount = ()=>{
+        AsyncStorage.getItem('name').then((value)=>{
+
+            this.state={
+                name : value
+            };
+        })
     }
 
     render() {
@@ -32,12 +62,12 @@ export default class HomeMainScreen extends React.Component {
                 <View style = {styles.minibox}>
 
                 <Text numberOfLines={5} style={{margin:10,color:'#F47B22'}}>
-                    Welcome, User
+                    Welcome, {this.state.name?this.state.name:'User'}
                 </Text>
 
                 <View style = {{paddingTop:10}}>
                 <Button
-                    onPress={this.onPressLearnMore}
+                    onPress={this.onPurchaseList.bind(this)}
 
                     title="PURCHASE LIST"
                     color="#F47B22"
@@ -46,7 +76,7 @@ export default class HomeMainScreen extends React.Component {
                 </View>
                     <View style = {{paddingTop:10}}>
                 <Button
-                    onPress={this.onPressLearnMore}
+                    onPress={this.onPurchase.bind(this)}
                     style = {{paddingTop:10}}
                     title="ADD PURCHASE"
                     color="#F47B22"
@@ -55,7 +85,7 @@ export default class HomeMainScreen extends React.Component {
                     </View>
                     <View style = {{paddingTop:10}}>
                 <Button
-                    onPress={this.onPressLearnMore}
+                    onPress={this.onSalesList.bind(this)}
                     style = {{paddingTop:10}}
                     title="SALES LIST"
                     color="#F47B22"
@@ -64,7 +94,7 @@ export default class HomeMainScreen extends React.Component {
                     </View>
                     <View style = {{paddingTop:10}}>
                 <Button
-                    onPress={this.onPressLearnMore}
+                    onPress={this.onSales.bind(this)}
                     style = {{paddingTop:10}}
                     title="ADD SALES"
                     color="#F47B22"
@@ -73,7 +103,7 @@ export default class HomeMainScreen extends React.Component {
                     </View>
                     <View style = {{paddingTop:10}}>
                 <Button
-                    onPress={this.onPressLearnMore}
+                    onPress={this.onSignOut.bind(this)}
                     style = {{paddingTop:10}}
                     title="SIGN OUT"
                     color="#F47B22"

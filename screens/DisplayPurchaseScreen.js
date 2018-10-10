@@ -1,13 +1,37 @@
 import React from 'react';
-import {FlatList, StatusBar, StyleSheet, Text, View} from 'react-native';
+import {Alert, AsyncStorage, FlatList, StatusBar, StyleSheet, Text, View} from 'react-native';
+import * as api from "../api/api";
 
 export default class DisplayPurchaseScreen extends React.Component {
 
     static navigationOptions = {
         title: 'PURCHASE LIST',
-        headerLeft: null,
     };
 
+    componentDidMount = ()=>{
+
+
+        fetch(api.BASE_URL+'/api/purchase/1') .then((response) => response.json())
+            .then((responseJson) => {
+
+
+                    Alert.alert(
+                        'Login Success',
+                        JSON.stringify(responseJson),
+                        [
+                            {text: 'OK', onPress: () => console.log('OK Pressed')},
+                        ],
+                        {cancelable: false}
+                    )
+
+            })
+            .catch((error) => {})
+    }
+
+    constructor(){
+        super();
+
+    }
 
     render() {
         return (
