@@ -1,5 +1,5 @@
 import React from 'react';
-import {AsyncStorage, Button, Image, StatusBar, StyleSheet, Text, View} from 'react-native';
+import {ActivityIndicator, AsyncStorage, Button, Image, StatusBar, StyleSheet, Text, View} from 'react-native';
 import { NavigationActions } from 'react-navigation';
 import a from './../assets/images/logo2.png'
 export default class HomeMainScreen extends React.Component {
@@ -11,40 +11,51 @@ export default class HomeMainScreen extends React.Component {
 
     onSignOut=()=>{
         // if(param === 'signout'){
+        this.setState({loader:true})
         AsyncStorage.setItem('login', 'false');
             this.props.navigation.navigate('login');
         // }
 
     }
     onSales = ()=>{
+        this.setState({loader:true})
         this.props.navigation.navigate('Sales');
+        this.setState({loader:false})
     };
     onSalesList = ()=>{
+        this.setState({loader:true})
         this.props.navigation.navigate('SalesList');
+        this.setState({loader:false})
     };
     onPurchase=()=>{
+        this.setState({loader:true})
         this.props.navigation.navigate('Purchase');
+        this.setState({loader:false})
     };
     onPurchaseList=()=>{
+        this.setState({loader:true})
         this.props.navigation.navigate('PurchaseList');
+        this.setState({loader:false})
     };
 
     constructor(props) {
         super(props);
-        this.state={
-            name:''
-        }
 
+        this.state={
+            name:'',
+            loader:false
+        }
+        AsyncStorage.getItem('name').then((value)=>{
+
+            this.setState({
+                name : value
+            })
+        })
 
     }
 
     componentDidMount = ()=>{
-        AsyncStorage.getItem('name').then((value)=>{
 
-            this.state={
-                name : value
-            };
-        })
     }
 
     render() {
@@ -57,6 +68,7 @@ export default class HomeMainScreen extends React.Component {
                     style={{width: 150, height: 150}}
                     source={a}
                 />
+                    {this.state.loader && <ActivityIndicator size="large" color="#F47B22"/>}
                 </View>
 
                 <View style = {styles.minibox}>
