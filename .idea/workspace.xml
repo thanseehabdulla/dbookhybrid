@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2b92283-8816-4ac7-905d-839b556889af" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/AddPurchaseScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/AddPurchaseScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/AddSalesScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/AddSalesScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/DisplayPurchaseDetailScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/DisplayPurchaseDetailScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/DisplayPurchaseScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/DisplayPurchaseScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/DisplaySalesDetailScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/DisplaySalesDetailScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/DisplaySalesScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/DisplaySalesScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/HomeMainScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeMainScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/LoginScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,8 +17,8 @@
       <file leaf-file-name="LoginScreen.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/LoginScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="255">
+              <caret line="115" column="33" lean-forward="true" selection-start-line="113" selection-start-column="30" selection-end-line="115" selection-end-column="33" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -48,8 +38,8 @@
       <file leaf-file-name="HomeMainScreen.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/HomeMainScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="52" column="10" lean-forward="true" selection-start-line="47" selection-start-column="7" selection-end-line="52" selection-end-column="10" />
+            <state relative-caret-position="833">
+              <caret line="52" column="10" selection-start-line="47" selection-start-column="7" selection-end-line="52" selection-end-column="10" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -57,14 +47,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddPurchaseScreen.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AddPurchaseScreen.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/screens/AddPurchaseScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="261" column="22" lean-forward="true" selection-start-line="258" selection-start-column="54" selection-end-line="261" selection-end-column="22" />
+            <state relative-caret-position="473">
+              <caret line="167" column="37" selection-start-line="167" selection-start-column="37" selection-end-line="167" selection-end-column="37" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#201#610#0" />
               </folding>
             </state>
           </provider>
@@ -74,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/api/api.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -82,8 +71,8 @@
       <file leaf-file-name="DisplayPurchaseScreen.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/DisplayPurchaseScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="46" column="10" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="10" />
+            <state relative-caret-position="595">
+              <caret line="46" column="10" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="10" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -94,7 +83,7 @@
       <file leaf-file-name="HomeNavigator.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/navigation/HomeNavigator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="85">
               <caret line="12" column="12" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="12" />
               <folding>
                 <element signature="e#0#63#0" expanded="true" />
@@ -106,7 +95,7 @@
       <file leaf-file-name="DisplaySalesScreen.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/DisplaySalesScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
+            <state relative-caret-position="170">
               <caret line="22" column="56" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="56" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -115,10 +104,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddSalesScreen.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AddSalesScreen.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/AddSalesScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1482">
+            <state relative-caret-position="17">
               <caret line="36" column="39" lean-forward="true" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -130,7 +119,7 @@
       <file leaf-file-name="DisplaySalesDetailScreen.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/DisplaySalesDetailScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
+            <state relative-caret-position="391">
               <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -179,9 +168,9 @@
         <option value="$PROJECT_DIR$/api/api.js" />
         <option value="$PROJECT_DIR$/screens/DisplayPurchaseScreen.js" />
         <option value="$PROJECT_DIR$/screens/DisplaySalesScreen.js" />
+        <option value="$PROJECT_DIR$/screens/AddSalesScreen.js" />
         <option value="$PROJECT_DIR$/screens/LoginScreen.js" />
         <option value="$PROJECT_DIR$/screens/AddPurchaseScreen.js" />
-        <option value="$PROJECT_DIR$/screens/AddSalesScreen.js" />
       </list>
     </option>
   </component>
@@ -214,6 +203,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -245,7 +235,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,11 +281,12 @@
       <workItem from="1539184937381" duration="7817000" />
       <workItem from="1539274072507" duration="8196000" />
       <workItem from="1539324237909" duration="16622000" />
+      <workItem from="1539445840530" duration="1693000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53434000" />
+    <option name="totallyTimeSpent" value="55127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -309,7 +299,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2526475" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25642964" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -319,9 +309,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,8 +325,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/screens/AddPurchaseScreen.js</url>
-          <line>4</line>
-          <properties lambdaOrdinal="-1" />
+          <line>14</line>
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="1" />
@@ -681,8 +670,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/HomeMainScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="52" column="10" lean-forward="true" selection-start-line="47" selection-start-column="7" selection-end-line="52" selection-end-column="10" />
+        <state relative-caret-position="833">
+          <caret line="52" column="10" selection-start-line="47" selection-start-column="7" selection-end-line="52" selection-end-column="10" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -692,14 +681,14 @@
     <entry file="file://$PROJECT_DIR$/api/api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/DisplayPurchaseScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="46" column="10" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="10" />
+        <state relative-caret-position="595">
+          <caret line="46" column="10" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="10" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -708,7 +697,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/DisplaySalesDetailScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="391">
           <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -718,18 +707,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/DisplaySalesScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
+        <state relative-caret-position="170">
           <caret line="22" column="56" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screens/LoginScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -738,7 +717,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/navigation/HomeNavigator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="85">
           <caret line="12" column="12" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="12" />
           <folding>
             <element signature="e#0#63#0" expanded="true" />
@@ -746,21 +725,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/AddPurchaseScreen.js">
+    <entry file="file://$PROJECT_DIR$/screens/AddSalesScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="261" column="22" lean-forward="true" selection-start-line="258" selection-start-column="54" selection-end-line="261" selection-end-column="22" />
+        <state relative-caret-position="17">
+          <caret line="36" column="39" lean-forward="true" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#201#610#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/AddSalesScreen.js">
+    <entry file="file://$PROJECT_DIR$/screens/LoginScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1482">
-          <caret line="36" column="39" lean-forward="true" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+        <state relative-caret-position="255">
+          <caret line="115" column="33" lean-forward="true" selection-start-line="113" selection-start-column="30" selection-end-line="115" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/AddPurchaseScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="167" column="37" selection-start-line="167" selection-start-column="37" selection-end-line="167" selection-end-column="37" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

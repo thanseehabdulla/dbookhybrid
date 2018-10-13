@@ -1,5 +1,15 @@
 import React from 'react';
-import {Alert, AsyncStorage, Button, StatusBar, StyleSheet, Text, TextInput, View} from 'react-native';
+import {
+    Alert,
+    AsyncStorage,
+    Button,
+    KeyboardAvoidingView,
+    StatusBar,
+    StyleSheet,
+    Text,
+    TextInput,
+    View
+} from 'react-native';
 import SearchableDropDown from "react-native-searchable-dropdown";
 import DatePicker from "react-native-datepicker";
 import * as api from "../api/api";
@@ -154,69 +164,8 @@ export default class AddPurchaseScreen extends React.Component {
         return (
             <View style={styles.container}>
                 <StatusBar hidden/>
-
+                {/*<KeyboardAvoidingView behavior="padding" enabled>*/}
                 <View style={{flexDirection: 'column', height: 440, padding: 20}}>
-                    <Text>VENDER NAME : </Text>
-                    <SearchableDropDown
-                        onTextChange={(text) => console.log(text)}
-                        onItemSelect={(item) => this.setState({trn_no: item.trn_no, vendername: item.name})}
-                        containerStyle={{
-                            padding: 0,
-
-                        }}
-                        textInputStyle={{
-                            backgroundColor: '#fff',
-                            padding: 12,
-                            height: 40,
-                            borderWidth: 1,
-                            borderColor: '#F47B22',
-                            borderRadius: 10
-                        }}
-                        itemStyle={{
-                            padding: 10,
-                            marginTop: 2,
-                            backgroundColor: '#ddd',
-                            borderColor: '#bbb',
-                            borderWidth: 0,
-                            borderRadius: 5
-                        }}
-                        itemTextStyle={{
-                            color: '#222'
-                        }}
-                        itemsContainerStyle={{
-                            maxHeight: 140
-                        }}
-                        items={this.state.data}
-                        defaultIndex={2}
-                        placeholder="Vendername"
-                        resetValue={false}
-                        underlineColorAndroid='transparent'/>
-
-                    <Text>INVOICE NUMBER : </Text>
-                    <TextInput onChangeText={(text) => this.setState({invoicenumber:text})} underlineColorAndroid='transparent'
-                               style={{
-                                   backgroundColor: '#fff',
-                                   height: 40,
-                                   paddingLeft: 10,
-                                   paddingTop: 0,
-                                   paddingBottom: 0,
-                                   borderColor: '#F47B22',
-                                   borderWidth: 1,
-                                   borderRadius: 10,
-                               }}/>
-
-                    <Text>TRN NO :</Text>
-                    <TextInput editable={false} underlineColorAndroid='transparent' style={{
-                        backgroundColor: '#fff',
-                        height: 40,
-                        paddingLeft: 10,
-                        paddingTop: 0,
-                        paddingBottom: 0,
-                        borderColor: '#F47B22',
-                        borderWidth: 1,
-                        borderRadius: 10,
-                    }} value={this.state.trn_no}/>
-
                     <Text>DATE INVOICE : </Text>
                     <DatePicker
                         style={{
@@ -254,12 +203,91 @@ export default class AddPurchaseScreen extends React.Component {
                             this.setState({dateinvoice: date})
                         }}
                     />
+                    <Text>VENDER NAME : </Text>
+                    <SearchableDropDown
+                        onTextChange={(text) => console.log(text)}
+                        onItemSelect={(item) => this.setState({trn_no: item.trn_no, vendername: item.name})}
+                        containerStyle={{
+                            padding: 0,
+
+                        }}
+                        textInputStyle={{
+                            backgroundColor: '#fff',
+                            padding: 12,
+                            height: 40,
+                            borderWidth: 1,
+                            borderColor: '#F47B22',
+                            borderRadius: 10
+                        }}
+                        itemStyle={{
+                            padding: 10,
+                            marginTop: 2,
+                            backgroundColor: '#ddd',
+                            borderColor: '#bbb',
+                            borderWidth: 0,
+                            borderRadius: 5
+                        }}
+                        itemTextStyle={{
+                            color: '#222'
+                        }}
+                        itemsContainerStyle={{
+                            maxHeight: 140
+                        }}
+                        returnKeyType={"next"}
+                        onSubmitEditing={() => {
+                            this.secondTextInput.focus();
+                        }}
+                        items={this.state.data}
+                        defaultIndex={2}
+                        placeholder="Vendername"
+                        resetValue={false}
+                        underlineColorAndroid='transparent'/>
+
+                    <Text>TRN NO :</Text>
+                    <TextInput editable={false} underlineColorAndroid='transparent' style={{
+                        backgroundColor: '#fff',
+                        height: 40,
+                        paddingLeft: 10,
+                        paddingTop: 0,
+                        paddingBottom: 0,
+                        borderColor: '#F47B22',
+                        borderWidth: 1,
+                        borderRadius: 10,
+                    }} value={this.state.trn_no}/>
+
+
+                    <Text>INVOICE NUMBER : </Text>
+                    <TextInput onChangeText={(text) => this.setState({invoicenumber:text})} underlineColorAndroid='transparent'
+                               returnKeyType={"next"}
+                               onSubmitEditing={() => {
+                                   this.thirdTextInput.focus();
+                               }}
+                               ref={(input) => {
+                                   this.secondTextInput = input;
+                               }}
+                               style={{
+                                   backgroundColor: '#fff',
+                                   height: 40,
+                                   paddingLeft: 10,
+                                   paddingTop: 0,
+                                   paddingBottom: 0,
+                                   borderColor: '#F47B22',
+                                   borderWidth: 1,
+                                   borderRadius: 10,
+                               }}/>
 
                     <Text>AMOUNT : </Text>
                     <TextInput keyboardType='numeric' value={this.state.amount} onChangeText={(text) => {
                         let total = (parseFloat(text)+ parseFloat(this.state.vat)).toFixed(2).toString()
                         this.setState({amount:text,total:total})
                     }}
+                               returnKeyType={"next"}
+                               onSubmitEditing={() => {
+                                   this.fourTextInput.focus();
+                               }}
+                               ref={(input) => {
+                                   this.thirdTextInput = input;
+                               }}
                                underlineColorAndroid='transparent' style={{
                         backgroundColor: '#fff',
                         height: 40,
@@ -276,6 +304,9 @@ export default class AddPurchaseScreen extends React.Component {
                         let total = (parseFloat(text)+ parseFloat(this.state.amount)).toFixed(2).toString()
                         this.setState({vat:text,total:total})
                     }}
+                               ref={(input) => {
+                                   this.fourTextInput = input;
+                               }}
                                underlineColorAndroid='transparent' style={{
                         backgroundColor: '#fff',
                         height: 40,
@@ -312,7 +343,7 @@ export default class AddPurchaseScreen extends React.Component {
 
                     </View>
                 </View>
-
+                {/*</KeyboardAvoidingView>*/}
             </View>
         );
     }

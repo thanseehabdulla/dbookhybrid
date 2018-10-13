@@ -1,22 +1,22 @@
 import React from 'react';
 import {
+    ActivityIndicator,
+    Alert,
+    AsyncStorage,
     Button,
+    Image, KeyboardAvoidingView, ScrollView,
     StatusBar,
     StyleSheet,
     Text,
     TextInput,
-    View,
-    Alert,
-    Image,
-    AsyncStorage,
-    ActivityIndicator
+    View
 } from 'react-native';
 import a from './../assets/images/logo2.png'
 import * as api from './../api/api'
 
 export default class LoginScreen extends React.Component {
     onPressLearnMore = () => {
-        this.setState({loader:true})
+        this.setState({loader: true})
         fetch(api.LOGIN_API, {
             method: 'POST',
             headers: {
@@ -29,7 +29,7 @@ export default class LoginScreen extends React.Component {
             }),
         }).then((response) => response.json())
             .then((responseJson) => {
-console.log(responseJson)
+                console.log(responseJson)
                 if (responseJson.status === 'success') {
                     AsyncStorage.setItem('name', this.state.username);
                     AsyncStorage.setItem('login', 'true');
@@ -38,7 +38,7 @@ console.log(responseJson)
 
 
                 } else {
-                    this.setState({loader:false})
+                    this.setState({loader: false})
                     Alert.alert(
                         'Login Failed',
                         JSON.stringify(responseJson),
@@ -50,7 +50,7 @@ console.log(responseJson)
                 }
             })
             .catch((error) => {
-                this.setState({loader:false})
+                this.setState({loader: false})
                 Alert.alert(
                     'Login Failed',
                     'Invalid Credential!! Please try Again',
@@ -88,6 +88,7 @@ console.log(responseJson)
                     backgroundColor="blue"
                     barStyle="light-content"
                 />
+                <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
                 <Image
                     style={{width: 150, height: 150}}
                     source={a}
@@ -96,20 +97,28 @@ console.log(responseJson)
                 <Text numberOfLines={5} style={{margin: 10, color: '#F47B22'}}>
                     Welcome, Please sign in to continue
                 </Text>
+
                 <View style={styles.minibox}>
                     <TextInput
                         style={{width: 300, height: 40, borderColor: 'gray', borderWidth: 0, marginBottom: 10}}
                         onChangeText={(text) => this.setState({username: text, disabled: false})}
                         placeholder='username'
+                        returnKeyType={"next"}
+                        onSubmitEditing={() => {
+                            this.secondTextInput.focus();
+                        }}
                         keyboardType='email-address'
                         value={this.state.username}
                     />
-                    <TextInput
-                        style={{width: 300, height: 40, borderColor: 'gray', borderWidth: 0, marginBottom: 10}}
-                        placeholder='password'
-                        onChangeText={(text) => this.setState({password: text, disabled: false})}
-                        value={this.state.password}
-                        TYPE="visible-password"
+                    <TextInput secureTextEntry={true}
+                               ref={(input) => {
+                                   this.secondTextInput = input;
+                               }}
+                               style={{width: 300, height: 40, borderColor: 'gray', borderWidth: 0, marginBottom: 10}}
+                               placeholder='password'
+                               onChangeText={(text) => this.setState({password: text, disabled: false})}
+                               value={this.state.password}
+                               TYPE="visible-password"
                     />
                     <Button
                         onPress={this.onPressLearnMore}
@@ -120,6 +129,7 @@ console.log(responseJson)
                         accessibilityLabel="Learn more about this purple button"
                     />
                 </View>
+                </KeyboardAvoidingView>
             </View>
         );
     }

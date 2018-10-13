@@ -136,6 +136,13 @@ export default class AddSalesScreen extends React.Component {
                         let net_total = (parseFloat(text)+ parseFloat(this.state.tax)).toFixed(2).toString()
                         this.setState({net_sales:text,net_total:net_total})
                     }}
+                               returnKeyType={"next"}
+                               onSubmitEditing={() => {
+                                   this.fourTextInput.focus();
+                               }}
+                               ref={(input) => {
+                                   this.thirdTextInput = input;
+                               }}
                         underlineColorAndroid='transparent' style={{
                         backgroundColor: '#fff',
                         height: 40,
@@ -152,6 +159,9 @@ export default class AddSalesScreen extends React.Component {
                         let net_total = (parseFloat(text)+ parseFloat(this.state.net_sales)).toFixed(2).toString()
                         this.setState({tax:text,net_total:net_total})
                     }}
+                               ref={(input) => {
+                                   this.fourTextInput = input;
+                               }}
                         underlineColorAndroid='transparent' style={{
                         backgroundColor: '#fff',
                         height: 40,
