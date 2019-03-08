@@ -6,7 +6,7 @@
     "privacy": "public",
     "sdkVersion": "30.0.0",
     "platforms": ["ios", "android"],
-    "version": "5.0.0",
+    "version": "7.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/logo.png",
     "splash": {
@@ -25,7 +25,13 @@
       "bundleIdentifier": "com.atsstudios.dbook"
     },
     "android": {
-      "package": "com.atsstudios.dbook"
+      "package": "com.atsstudios.dbook",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.atsstudios.dbook",
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+
     }
   }
 }
